@@ -1,5 +1,5 @@
-# Ignore environment configuration
-.env-config.js
+# Ignore environment configuration with sensitive data
+# .env-config.js is now included to avoid 404 errors
 
 # Ignore node modules if you have any
 node_modules/
