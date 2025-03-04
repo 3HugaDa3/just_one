@@ -1,0 +1,14 @@
+# Ignore environment configuration
+.env-config.js
+
+# Ignore node modules if you have any
+node_modules/
+
+# Ignore any logs
+*.log
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
