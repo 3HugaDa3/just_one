@@ -1,5 +1,8 @@
 // Supabase configuration
-const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+const supabaseClient = window.supabase.createClient(
+    'https://istmrrnszmtrfkxzuhpi.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdG1ycm5zem10cmZreHp1aHBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAzNTkyMzgsImV4cCI6MjA1NTkzNTIzOH0.GF5YJ2r_P2S1WJ2cTTaigYAkfDLriz7Lv354bNIx7Hw'
+)
 
 // Game state
 let gameState = {
