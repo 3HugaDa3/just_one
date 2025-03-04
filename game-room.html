@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just One - Game Room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h2>Game Code: <span id="game-code" class="game-code"></span></h2>
+            <div class="players-info">
+                <div id="players-count">Players: 0</div>
+                <ul id="players-list" class="players-list"></ul>
+            </div>
+        </div>
+
+        <div id="waiting-screen" class="game-screen">
+            <h3>Waiting for players...</h3>
+            <p>Need at least 3 players to start</p>
+            <button id="start-game-btn" class="primary-btn" style="display: none;">Start Game</button>
+        </div>
+
+        <div id="word-selection-screen" class="game-screen" style="display: none;">
+            <h3>Selecting word and guesser...</h3>
+            <div class="waiting-message">Please wait...</div>
+        </div>
+
+        <div id="clue-input-screen" class="game-screen" style="display: none;">
+            <div class="word-info-container">
+                <div class="word-card">
+                    <div class="word-label">The word is:</div>
+                    <div id="current-word" class="word-display"></div>
+                </div>
+                <div class="guesser-info">
+                    <div class="guesser-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div id="guesser-name" class="guesser-name"></div>
+                    <div class="guesser-label">will be guessing</div>
+                </div>
+            </div>
+            
+            <div class="clue-input-container">
+                <h3>Write Your Clue</h3>
+                <input type="text" id="clue-input" placeholder="Enter your one-word clue...">
+                <button id="submit-clue-btn" class="primary-btn">Submit Clue</button>
+                <div id="your-clue" class="your-clue" style="display: none;"></div>
+            </div>
+            
+            <div class="waiting-message" style="display: none;">
+                Waiting for other players to submit their clues...
+            </div>
+        </div>
+
+        <div id="guess-input-screen" class="game-screen" style="display: none;">
+            <h3>Time to guess!</h3>
+            <div class="clues-container">
+                <h4>Clues:</h4>
+                <div id="clues-list" class="clues-list"></div>
+            </div>
+            <div class="guess-input-container">
+                <input type="text" id="guess-input" placeholder="Enter your guess...">
+                <button id="submit-guess-btn" class="primary-btn">Submit Guess</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="game-screen" style="display: none;">
+            <div id="result-message" class="result-message"></div>
+            <div class="word-reveal">
+                <p>The word was: <span class="highlight-word"></span></p>
+            </div>
+            <div class="clues-summary">
+                <h4>All Clues:</h4>
+                <div id="all-clues-list"></div>
+            </div>
+            <div class="next-round-container">
+                <button id="next-round-btn" class="primary-btn" style="display: none;">Start Next Round</button>
+                <p id="waiting-for-host" class="waiting-message" style="display: none;">
+                    Waiting for host to start next round...
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src=".env-config.js"></script>
+    <script src="config.js"></script>
+    <script src="game-room.js"></script>
+</body>
+</html>
