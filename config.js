@@ -1,16 +1,3 @@
-// Configuration file that loads environment variables or uses defaults
-const config = {
-    // Default values will be replaced in production environment
-    SUPABASE_URL: 'YOUR_SUPABASE_URL',
-    SUPABASE_ANON_KEY: 'YOUR_SUPABASE_ANON_KEY'
-};
-
-// In development, load from local .env-config.js
-try {
-    if (typeof envConfig !== 'undefined') {
-        config.SUPABASE_URL = envConfig.SUPABASE_URL;
-        config.SUPABASE_ANON_KEY = envConfig.SUPABASE_ANON_KEY;
-    }
-} catch (error) {
-    console.log('No env-config.js found, using default config');
-}
+// Supabase configuration
+const SUPABASE_URL = 'https://istmrrnszmtrfkxzuhpi.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdG1ycm5zem10cmZreHp1aHBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAzNTkyMzgsImV4cCI6MjA1NTkzNTIzOH0.GF5YJ2r_P2S1WJ2cTTaigYAkfDLriz7Lv354bNIx7Hw';

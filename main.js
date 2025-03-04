@@ -1,6 +1,4 @@
 // Supabase configuration
-const SUPABASE_URL = config.SUPABASE_URL;
-const SUPABASE_ANON_KEY = config.SUPABASE_ANON_KEY;
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 // DOM Elements
